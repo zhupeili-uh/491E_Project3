@@ -47,17 +47,17 @@ def main():
 
     # 4. 配置训练参数 (Schedule)
     schedule = {
-        'device': 'CPU',          # 若工具箱不支持 Mac MPS，则使用 CPU 训练
+        'device': 'mps',          # 若工具箱不支持 Mac MPS，则使用 CPU 训练
         'benign_training': False, # 设置为 False 表示进行带毒训练
-        'batch_size': 128,        # 适度降低 batch_size 适配 Mac 内存
+        'batch_size': 512,        # 适度降低 batch_size 适配 Mac 内存
         'num_workers': 2,
         'lr': 0.1,
         'momentum': 0.9,
         'weight_decay': 5e-4,
         'gamma': 0.1,
         'schedule': [150, 180],
-        'epochs': 2,            # 建议初次测试时改成 2，确认代码跑通后再改回 200
-        'log_iteration_interval': 100,
+        'epochs': 200,            # 建议初次测试时改成 2，确认代码跑通后再改回 200
+        'log_iteration_interval': 20,
         'test_epoch_interval': 10,
         'save_epoch_interval': 10,
         'save_dir': 'experiments',
