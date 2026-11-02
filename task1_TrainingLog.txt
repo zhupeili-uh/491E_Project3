@@ -1,0 +1,148 @@
+开始 BadNet 投毒训练...
+==========Schedule parameters==========
+
+{'device': 'mps', 'benign_training': False, 'batch_size': 512, 'num_workers': 2, 'lr': 0.1, 'momentum': 0.9, 'weight_decay': 0.0005, 'gamma': 0.1, 'schedule': [150, 180], 'epochs': 200, 'log_iteration_interval': 20, 'test_epoch_interval': 10, 'save_epoch_interval': 10, 'save_dir': 'experiments', 'experiment_name': 'ResNet-18_CIFAR-10_BadNets'}
+
+Total train samples: 50000
+Total test samples: 10000
+Batch size: 512
+iteration every epoch: 97
+Initial learning rate: 0.1
+
+/Users/zpl/Unterlagen/491E/Project3/myenv/lib/python3.9/site-packages/torch/utils/data/dataloader.py:684: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+/Users/zpl/Unterlagen/491E/Project3/./BackdoorBox/core/attacks/base.py:234: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  msg = time.strftime("[%Y-%m-%d_%H:%M:%S] ", time.localtime()) + f"Epoch:{i+1}/{self.current_schedule['epochs']}, iteration:{batch_id + 1}/{len(self.poisoned_train_dataset)//self.current_schedule['batch_size']}, lr: {optimizer.param_groups[0]['lr']}, loss: {float(loss)}, time: {time.time()-last_time}\n"
+[2026-10-31_17:29:41] Epoch:1/200, iteration:20/97, lr: 0.10000000149011612, loss: 2.6777477264404297, time: 135.27059507369995
+
+[2026-10-31_17:31:57] Epoch:1/200, iteration:40/97, lr: 0.10000000149011612, loss: 2.045186758041382, time: 135.94336223602295
+
+[2026-10-31_17:34:08] Epoch:1/200, iteration:60/97, lr: 0.10000000149011612, loss: 2.027944803237915, time: 131.81407523155212
+
+[2026-10-31_17:36:26] Epoch:1/200, iteration:80/97, lr: 0.10000000149011612, loss: 1.852376937866211, time: 137.28874492645264
+
+[2026-10-31_17:38:43] Epoch:2/200, iteration:2/97, lr: 0.10000000149011612, loss: 1.872185468673706, time: 137.5938742160797
+
+[2026-10-31_17:40:56] Epoch:2/200, iteration:22/97, lr: 0.10000000149011612, loss: 1.7472097873687744, time: 133.2541778087616
+
+[2026-10-31_17:43:17] Epoch:2/200, iteration:42/97, lr: 0.10000000149011612, loss: 1.6794065237045288, time: 140.88291192054749
+
+[2026-10-31_17:45:38] Epoch:2/200, iteration:62/97, lr: 0.10000000149011612, loss: 1.5888434648513794, time: 140.13553094863892
+
+[2026-10-31_17:47:55] Epoch:2/200, iteration:82/97, lr: 0.10000000149011612, loss: 1.612449288368225, time: 137.0135679244995
+
+[2026-10-31_17:50:11] Epoch:3/200, iteration:4/97, lr: 0.10000000149011612, loss: 1.521307349205017, time: 136.5131640434265
+
+[2026-10-31_17:52:23] Epoch:3/200, iteration:24/97, lr: 0.10000000149011612, loss: 1.5672105550765991, time: 132.20205092430115
+
+[2026-10-31_17:54:37] Epoch:3/200, iteration:44/97, lr: 0.10000000149011612, loss: 1.4279260635375977, time: 133.3286168575287
+
+[2026-10-31_17:56:52] Epoch:3/200, iteration:64/97, lr: 0.10000000149011612, loss: 1.4058326482772827, time: 135.6990647315979
+
+[2026-10-31_17:59:07] Epoch:3/200, iteration:84/97, lr: 0.10000000149011612, loss: 1.3270368576049805, time: 134.80239009857178
+
+[2026-10-31_18:01:23] Epoch:4/200, iteration:6/97, lr: 0.10000000149011612, loss: 1.3779748678207397, time: 135.5429880619049
+
+[2026-10-31_18:03:38] Epoch:4/200, iteration:26/97, lr: 0.10000000149011612, loss: 1.4012571573257446, time: 135.48613119125366
+
+[2026-10-31_18:05:55] Epoch:4/200, iteration:46/97, lr: 0.10000000149011612, loss: 1.2568644285202026, time: 136.61964011192322
+
+[2026-10-31_18:08:09] Epoch:4/200, iteration:66/97, lr: 0.10000000149011612, loss: 1.282299280166626, time: 134.28853702545166
+
+[2026-10-31_18:10:23] Epoch:4/200, iteration:86/97, lr: 0.10000000149011612, loss: 1.1858043670654297, time: 134.23830008506775
+
+[2026-10-31_18:12:38] Epoch:5/200, iteration:8/97, lr: 0.10000000149011612, loss: 1.084005355834961, time: 135.12262392044067
+
+[2026-10-31_18:14:55] Epoch:5/200, iteration:28/97, lr: 0.10000000149011612, loss: 1.0451841354370117, time: 136.40082621574402
+
+[2026-10-31_18:17:12] Epoch:5/200, iteration:48/97, lr: 0.10000000149011612, loss: 1.121455430984497, time: 136.8812792301178
+
+[2026-10-31_18:19:31] Epoch:5/200, iteration:68/97, lr: 0.10000000149011612, loss: 1.0141483545303345, time: 139.57773900032043
+
+[2026-10-31_18:21:48] Epoch:5/200, iteration:88/97, lr: 0.10000000149011612, loss: 0.9338399171829224, time: 136.43053197860718
+
+[2026-10-31_18:24:04] Epoch:6/200, iteration:10/97, lr: 0.10000000149011612, loss: 0.9734295606613159, time: 136.46515822410583
+
+[2026-10-31_18:26:26] Epoch:6/200, iteration:30/97, lr: 0.10000000149011612, loss: 0.962174654006958, time: 141.72550201416016
+
+[2026-10-31_18:28:42] Epoch:6/200, iteration:50/97, lr: 0.10000000149011612, loss: 0.8556810617446899, time: 135.98090076446533
+
+[2026-10-31_18:31:00] Epoch:6/200, iteration:70/97, lr: 0.10000000149011612, loss: 0.8783814907073975, time: 138.5887598991394
+
+[2026-10-31_18:33:17] Epoch:6/200, iteration:90/97, lr: 0.10000000149011612, loss: 0.8577315807342529, time: 136.69595885276794
+
+[2026-10-31_18:35:32] Epoch:7/200, iteration:12/97, lr: 0.10000000149011612, loss: 0.8182113766670227, time: 134.4409921169281
+
+[2026-10-31_18:37:47] Epoch:7/200, iteration:32/97, lr: 0.10000000149011612, loss: 0.7655589580535889, time: 135.70150923728943
+
+[2026-10-31_18:40:07] Epoch:7/200, iteration:52/97, lr: 0.10000000149011612, loss: 0.7468182444572449, time: 140.10184693336487
+
+[2026-10-31_18:42:25] Epoch:7/200, iteration:72/97, lr: 0.10000000149011612, loss: 0.7450616955757141, time: 137.99138402938843
+
+[2026-10-31_18:44:42] Epoch:7/200, iteration:92/97, lr: 0.10000000149011612, loss: 0.7107833623886108, time: 136.59960889816284
+
+[2026-10-31_18:46:58] Epoch:8/200, iteration:14/97, lr: 0.10000000149011612, loss: 0.6404061317443848, time: 136.1436038017273
+
+[2026-10-31_18:49:17] Epoch:8/200, iteration:34/97, lr: 0.10000000149011612, loss: 0.6808688044548035, time: 138.67306089401245
+
+[2026-10-31_18:51:34] Epoch:8/200, iteration:54/97, lr: 0.10000000149011612, loss: 0.5831766724586487, time: 137.40246605873108
+
+[2026-10-31_18:53:54] Epoch:8/200, iteration:74/97, lr: 0.10000000149011612, loss: 0.6671589612960815, time: 139.46383690834045
+
+[2026-10-31_18:56:12] Epoch:8/200, iteration:94/97, lr: 0.10000000149011612, loss: 0.6738417148590088, time: 138.56761384010315
+
+[2026-10-31_18:58:30] Epoch:9/200, iteration:16/97, lr: 0.10000000149011612, loss: 0.5035902261734009, time: 138.28089499473572
+
+[2026-10-31_19:00:50] Epoch:9/200, iteration:36/97, lr: 0.10000000149011612, loss: 0.6224996447563171, time: 139.47860980033875
+
+[2026-10-31_19:03:06] Epoch:9/200, iteration:56/97, lr: 0.10000000149011612, loss: 0.6294518709182739, time: 135.64528894424438
+
+[2026-10-31_19:05:23] Epoch:9/200, iteration:76/97, lr: 0.10000000149011612, loss: 0.5682626962661743, time: 137.33822584152222
+
+[2026-10-31_19:07:42] Epoch:9/200, iteration:96/97, lr: 0.10000000149011612, loss: 0.535516619682312, time: 138.69202303886414
+
+[2026-10-31_19:09:59] Epoch:10/200, iteration:18/97, lr: 0.10000000149011612, loss: 0.5763698220252991, time: 137.27265286445618
+
+[2026-10-31_19:12:16] Epoch:10/200, iteration:38/97, lr: 0.10000000149011612, loss: 0.5632510781288147, time: 137.03257179260254
+
+[2026-10-31_19:14:32] Epoch:10/200, iteration:58/97, lr: 0.10000000149011612, loss: 0.5323725342750549, time: 136.47677493095398
+
+[2026-10-31_19:16:51] Epoch:10/200, iteration:78/97, lr: 0.10000000149011612, loss: 0.5849024057388306, time: 138.93118000030518
+
+[2026-10-31_19:19:07] Epoch:10/200, iteration:98/97, lr: 0.10000000149011612, loss: 0.5233593583106995, time: 135.79592490196228
+
+==========Test result on benign test dataset==========
+[2026-10-31_19:19:55] Top-1 correct / Total: 7090/10000, Top-1 accuracy: 0.709, Top-5 correct / Total: 9764/10000, Top-5 accuracy: 0.9764, mean loss: 0.8621267080307007, time: 47.36467981338501
+
+==========Test result on poisoned test dataset==========
+[2026-10-31_19:20:46] Top-1 correct / Total: 9294/10000, Top-1 accuracy: 0.9294, Top-5 correct / Total: 9893/10000, Top-5 accuracy: 0.9893, mean loss: 0.26867562532424927, time: 99.01531076431274
+
+[2026-10-31_19:23:08] Epoch:11/200, iteration:20/97, lr: 0.10000000149011612, loss: 0.4946008622646332, time: 240.90334272384644
+
+[2026-10-31_19:25:24] Epoch:11/200, iteration:40/97, lr: 0.10000000149011612, loss: 0.44745492935180664, time: 135.64277696609497
+
+[2026-10-31_19:27:41] Epoch:11/200, iteration:60/97, lr: 0.10000000149011612, loss: 0.5157232284545898, time: 137.3908817768097
+
+[2026-10-31_19:29:58] Epoch:11/200, iteration:80/97, lr: 0.10000000149011612, loss: 0.42396461963653564, time: 137.1098439693451
+
+[2026-10-31_19:32:14] Epoch:12/200, iteration:2/97, lr: 0.10000000149011612, loss: 0.39344698190689087, time: 136.12379217147827
+
+[2026-10-31_19:34:27] Epoch:12/200, iteration:22/97, lr: 0.10000000149011612, loss: 0.4016669690608978, time: 132.35240173339844
+
+[2026-10-31_19:36:41] Epoch:12/200, iteration:42/97, lr: 0.10000000149011612, loss: 0.39773041009902954, time: 134.5588870048523
+
+^CTraceback (most recent call last):
+  File "/Users/zpl/Unterlagen/491E/Project3/task1_badnet.py", line 74, in <module>
+    main()
+  File "/Users/zpl/Unterlagen/491E/Project3/task1_badnet.py", line 69, in main
+    badnets.train(schedule)
+  File "/Users/zpl/Unterlagen/491E/Project3/./BackdoorBox/core/attacks/base.py", line 228, in train
+    loss.backward()
+  File "/Users/zpl/Unterlagen/491E/Project3/myenv/lib/python3.9/site-packages/torch/_tensor.py", line 647, in backward
+    torch.autograd.backward(
+  File "/Users/zpl/Unterlagen/491E/Project3/myenv/lib/python3.9/site-packages/torch/autograd/__init__.py", line 354, in backward
+    _engine_run_backward(
+  File "/Users/zpl/Unterlagen/491E/Project3/myenv/lib/python3.9/site-packages/torch/autograd/graph.py", line 829, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt
